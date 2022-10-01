@@ -1,0 +1,40 @@
+.offcanvas.offcanvas-end {
+  max-height: 20vh;
+  border-bottom: var(--bs-offcanvas-border-width) solid
+    var(--bs-offcanvas-border-color);
+}
+.offcanvas-body > .input-group {
+  width: 100%;
+}
+button.login {
+  border: none;
+}
+#announcements-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#announcements-list > article {
+  margin: 10px;
+}
+#announcements-list > article > .card {
+  height: 500px;
+  overflow: auto;
+}
+
+#announcements-list > article > .card > .picture {
+  max-height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.carousel-inner{
+    max-height: 50vh;
+}
+.sale{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 5px 10px;
+}
+
