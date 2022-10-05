@@ -1,7 +1,20 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-anchor: none !important;
+}
+a:-webkit-any-link {
+  overflow-anchor: none !important;
+  overscroll-behavior: none;
+}
+.navbar {
+  background-color: var(--bs-info);
+}
 .offcanvas.offcanvas-end {
-  max-height: 20vh;
+  max-height: max-content;
   border-bottom: var(--bs-offcanvas-border-width) solid
     var(--bs-offcanvas-border-color);
+  padding-bottom: 20px;
 }
 .offcanvas-body > .input-group {
   width: 100%;
@@ -27,14 +40,66 @@ button.login {
   display: flex;
   align-items: center;
 }
-.carousel-inner{
-    max-height: 50vh;
-}
-.sale{
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: right;
-    padding: 5px 10px;
+
+.sale {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 5px 10px;
 }
 
+#carousel-container {
+  background-color: var(--bs-warning);
+}
+.carousel-inner {
+  max-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.carousel-item {
+  display: initial;
+  opacity: 0;
+  transition: all 1s;
+  margin-top: 10vh;
+}
+
+.carousel-item.active {
+  display: initial;
+  opacity: 1;
+  transition: all 1s;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--bs-info);
+  height: 30px;
+  opacity: 0.5;
+}
+.carousel-indicators [data-bs-target].active {
+  opacity: 1;
+}
+.carousel h2 {
+  position: absolute;
+  width: 300px;
+  height: 10vh;
+  background: var(--bs-warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 20vw;
+  top: 5vh;
+}
+.carousel-item .datas {
+  position: absolute;
+  width: 300px;
+  height: 10vh;
+  background: var(--bs-warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  right:  40vw;
+  bottom: 10vh;
+}

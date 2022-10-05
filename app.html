@@ -12,15 +12,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+
     <link rel="stylesheet" href="app.css" />
     <title>WALLAPOP</title>
   </head>
   <body>
-      <div class="row">
+    <main class="main">
+      <!-- header -->
+      <header class="row" id="header-container">
         <div class="col-12">
-          <nav class="navbar bg-light">
+          <nav class="navbar bg-orange fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">WALLAPOP</a>
+              <a class="navbar-brand" >WALLAPOP</a>
               <button class="navbar-toggler login btn btn-info" type="button">
                 Login
                 <i class="bi bi-box-arrow-in-right"></i>
@@ -42,7 +45,7 @@
                   ></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form class="d-flex flex-column" role="search">
+                  <form class="d-flex flex-column" id="login-form">
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1">@</span>
                       <input
@@ -68,45 +71,28 @@
                     <div class="input-group mb-3">
                       <button class="btn btn-info" type="submit">Login</button>
                     </div>
+                    <div>¿No eres miembro aún? <a href="http://localhost:8080/signup.html">Date de alta</a></div>
                   </form>
                 </div>
               </div>
             </div>
           </nav>
         </div>
+      </header>
+      <!-- carousel -->
+      <section class="row p-0">
+        <div class="col-12 mb-5 py-5" id="carousel-container">
         </div>
-        <div class="row">
-            <div class="col-12 mb-5">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="./public/images/bicicleta.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mb-5"> <h1 class="text-center">WALLAPOP </h1></div>
+      </section>
+      <!-- products list -->
+
+      <section class="row p-5 m-5 text-center" id="produts-container">
+        <div class="col-12 mb-5"><h1 class="text-center">WALLAPOP</h1></div>
         <div class="col-12">
           <section id="announcements-list"></section>
         </div>
-      </div>
-    </div>
-</div>
-
+      </section>
+    </main>
     <script type="module" src="app.js"></script>
   </body>
 </html>

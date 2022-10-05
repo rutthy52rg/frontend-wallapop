@@ -1,5 +1,5 @@
 export async function getAnnouncemets() {
-  const announcementUrl = "http://localhost:3000/announcements";
+  const announcementUrl = "http://localhost:8000/api/announcements";
   // const tweetsUrl = 'https://images.pexels.com/photos/13252401/pexels-photo-13252401.jpeg';
 
   let response;
