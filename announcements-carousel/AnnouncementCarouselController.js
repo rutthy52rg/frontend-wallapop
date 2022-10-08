@@ -1,9 +1,9 @@
-import { getAnnouncemets } from "../announcements-list/annoucement-list-provider.js";
+import { getAnnouncemets } from "./annoucement-carousel-provider.js";
 import {
   buildCarouselContentView,
   buildCarouselDots,
   buildCarouselItemsView
-} from "./announcement-carousel-preview.js";
+} from "./announcement-carousel-view.js";
 
 //clase controlador para listar anuncios
 export class AnnouncementsCarouselController {
