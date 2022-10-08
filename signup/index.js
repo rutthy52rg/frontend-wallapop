@@ -1,8 +1,10 @@
-import { SignupController } from "./SignupController.js";
+
+import { SingUpController } from "./SingupController.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  const signUpFormElement = document.querySelector(".signup-form");
+  const signUpFormElement = document.querySelector("#signup-form");
 
-  const signupController = new SignupController(signUpFormElement);
+  const singUpController = new SingUpController(signUpFormElement);
 
 });
