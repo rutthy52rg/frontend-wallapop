@@ -1,9 +1,14 @@
+import { LoginController } from "../login/LoginController.js";
 import { AnnouncementsCarouselController } from "./announcements-carousel/AnnouncementCarouselController.js";
 import { AnnouncementsListController } from "./announcements-list/AnnouncementListController.js";
 import { NotificationController } from "./notifications/notificationsController.js";
+import {
+  clickEventAddCss,
+  clickEventRemoveCss
+} from "./utils/eventsActions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  appControllers();
+  setControllers();
   clickEventAddCss(".navbar-toggler", ".offcanvas-end", "show");
   clickEventRemoveCss(
     ".offcanvas-header > .btn-close",
@@ -12,36 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-const appControllers = () => {
-  const announcementCarouselSelector = document.querySelector(
-    "#carousel-container"
-  );
-  const announcementListSelector = document.querySelector(
-    "#announcements-list"
-  );
-
-  const notificationSelector = document.querySelector("#notification");
-  // const spinnerSelector = document.querySelector(".spinner");
-
-  const announcementsListController = new AnnouncementsListController(
-    announcementListSelector
-  );
-  const announcementCarouselController = new AnnouncementsCarouselController(
-    announcementCarouselSelector
-  );
-  const notificationController = new NotificationController(
-    notificationSelector
-  );
-};
-const clickEventAddCss = (elementClick, elementToModify, property) => {
-  const queryElementClick = document.querySelector(elementClick);
-  queryElementClick.addEventListener("click", (event) => {
-    document.querySelector(elementToModify).classList.add(property);
-  });
-};
-const clickEventRemoveCss = (elementClick, elementToModify, property) => {
-  const queryElementClick = document.querySelector(elementClick);
-  queryElementClick.addEventListener("click", (event) => {
-    document.querySelector(elementToModify).classList.remove(property);
-  });
+const setControllers = () => {
+    const selectors = {
+      announcementCarouselSelector: document.querySelector(
+        "#carousel-container"
+      ),
+      announcementListSelector: document.querySelector("#announcements-list"),
+      notificationSelector: document.querySelector("#notification"),
+      loginFormContainer: document.querySelector(".login-container"),
+    };
+    const controllers = {
+      announcementsListController: new AnnouncementsListController(
+        selectors.announcementListSelector
+      ),
+      announcementCarouselController: new AnnouncementsCarouselController(
+        selectors.announcementCarouselSelector
+      ),
+      notificationController: new NotificationController(
+        selectors.notificationSelector
+      ),
+      loginController: new LoginController(selectors.loginFormContainer),
+    };
+    return controllers;
 };

@@ -19,11 +19,12 @@
   <body>
     <main class="main">
       <!-- header -->
+
       <header class="row" id="header-container">
         <div class="col-12">
-          <nav class="navbar bg-light">
+          <nav class="navbar bg-orange fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">WALLAPOP</a>
+              <a href="http://localhost:8080/" class="navbar-brand">WALLAPOP</a>
               <button class="navbar-toggler login btn btn-info" type="button">
                 Login
                 <i class="bi bi-box-arrow-in-right"></i>
@@ -33,23 +34,26 @@
                 tabindex="-1"
                 id="offcanvasNavbar"
               >
-                <div class="offcanvas-header">
+                <div class="offcanvas-header bg-light">
                   <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    Salir
+                    Login
                   </h5>
                   <button
                     type="button"
                     class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
                   ></button>
                 </div>
-                <div class="offcanvas-body"></div>
+                <div class="offcanvas-body login-container" ></div>
               </div>
             </div>
           </nav>
         </div>
       </header>
+      <!-- body -->
       <section class="row justify-content-md-center" id="signup">
-        <div class="col-12 p-5 text-center"> <h1>Formulario de alta</h1></div>
+        <div class="col-12 p-5 text-center"><h1>Formulario de alta</h1></div>
         <div class="col-6 p-5">
           <form class="d-flex flex-column" id="signup-form">
             <div class="input-group mb-3">
@@ -80,6 +84,7 @@
             <div class="input-group mb-3">
               <button class="btn btn-info" type="submit">Create account</button>
             </div>
+            <a href="http://localhost:8080/">Volver a la Home</a>
           </form>
         </div>
       </section>

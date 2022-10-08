@@ -4,7 +4,6 @@ export class SpinnerController {
     this.spinnerSelector = nodeElement;
   }
   printSpinner() {
-    console.log('estoy cargando printSpinner')
     this.spinnerSelector.innerHTML = buildSpinner();
   }
   clearSpinner() {

@@ -1,8 +1,8 @@
 class ApiProviders {
   baseUrl = "http://localhost:8000";
   endpoints = {
-    login: "/auth/login",
     signup: "/auth/register",
+    login: "/auth/login",
     announcements: "/api/announcements",
   };
   constructor() {}

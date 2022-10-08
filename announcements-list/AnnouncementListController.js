@@ -1,9 +1,7 @@
 import { pubSub } from "../notifications/PubSub.js";
 import { SpinnerController } from "../spinner/SpinnerController.js";
 import { getAnnouncemets } from "./annoucement-list-provider.js";
-import {
-  buildAnnouncementView
-} from "./announcement-list-view.js";
+import { buildAnnouncementView } from "./announcement-list-view.js";
 
 //clase controlador para listar anuncios
 export class AnnouncementsListController {
@@ -15,7 +13,7 @@ export class AnnouncementsListController {
   }
 
   async loadAnnouncements() {
-    this.spinner.printSpinner()
+    this.spinner.printSpinner();
     let announcements = [];
 
     try {
@@ -25,14 +23,14 @@ export class AnnouncementsListController {
       pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, "Error cargando tweets");
     }
     //cargar aquí la funcion y condicional de cuanto pintar error de anuncios no encontrados
-    if (announcements.lenght === 0) {
+    if (announcements.length === 0) {
       pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "NO HAY ELEMENTOS");
+      this.spinner.clearSpinner();
+    } else {
+      this.printAnouncements(announcements);
+      this.spinner.clearSpinner();
+      pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "pintados");
     }
-    //cargar aquí es spinner de carga
-    // spinner.clearSpinner();
-    this.printAnouncements(announcements);
-    this.spinner.clearSpinner();
-    pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "pintados");
   }
 
   printAnouncements(announcements) {
@@ -45,4 +43,3 @@ export class AnnouncementsListController {
 
   //crear aquí la funcion que pinta anuncios no encontrados
 }
-

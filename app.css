@@ -122,3 +122,16 @@ button.login {
     border-right-color: transparent;
     margin: 30px auto;
 }
+
+/* modal */
+.modal.show{
+  display: block;
+}
+/* singup */
+
+#signup {
+    height: 60vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
