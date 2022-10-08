@@ -1,23 +1,9 @@
-export async function getAnnouncemets() {
-  const announcementUrl = "http://localhost:8000/api/announcements";
-  // const tweetsUrl = 'https://images.pexels.com/photos/13252401/pexels-photo-13252401.jpeg';
 
-  let response;
+//importamos fichero de endpoints y métodos api
+import { apiProviders } from "../ApiProviders.js";
 
-  try {
-    response = await fetch(announcementUrl);
-  } catch (error) {
-    throw new Error("El dominio no existe");
-  }
-
-  if (!response.ok) {
-    throw new Error("Anuncios no encontrados");
-  }
-
-  try {
-    const announcements = await response.json();
-    return announcements;
-  } catch (error) {
-    throw new Error("La respuesta no es válida");
-  }
-}
+//cogemos los anuncios ( los errores se gestionan en el controlador)
+export const getAnnouncemets = async () => {
+    const  announcements = await apiProviders.get(apiProviders.endpoints.announcements);
+    return announcements; 
+};

@@ -22,6 +22,7 @@ a:-webkit-any-link {
 button.login {
   border: none;
 }
+/* CARDS */
 #announcements-list {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +50,7 @@ button.login {
   padding: 5px 10px;
 }
 
+/* CAROUSEL */
 #carousel-container {
   background-color: var(--bs-warning);
 }
@@ -102,4 +104,21 @@ button.login {
   z-index: 1;
   right:  40vw;
   bottom: 10vh;
+}
+
+/* SPINNER */
+.spinner.hide{
+  display: none;
+}
+
+.spinner-border {
+    --bs-spinner-width: 20rem;
+    --bs-spinner-height: 20rem;
+    --bs-spinner-vertical-align: -0.125em;
+    --bs-spinner-border-width: 4em;
+    --bs-spinner-animation-speed: 1.2s;
+    --bs-spinner-animation-name: spinner-border;
+    border: var(--bs-spinner-border-width) solid currentcolor;
+    border-right-color: transparent;
+    margin: 30px auto;
 }

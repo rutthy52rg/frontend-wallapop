@@ -1,5 +1,6 @@
 import { AnnouncementsCarouselController } from "./announcements-carousel/AnnouncementCarouselController.js";
 import { AnnouncementsListController } from "./announcements-list/AnnouncementListController.js";
+import { NotificationController } from "./notifications/notificationsController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   appControllers();
@@ -12,16 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const appControllers = () => {
-  const announcementListElement = document.querySelector("#announcements-list");
-  const announcementCarouselElement = document.querySelector(
+  const announcementCarouselSelector = document.querySelector(
     "#carousel-container"
   );
+  const announcementListSelector = document.querySelector(
+    "#announcements-list"
+  );
+
+  const notificationSelector = document.querySelector("#notification");
+  // const spinnerSelector = document.querySelector(".spinner");
 
   const announcementsListController = new AnnouncementsListController(
-    announcementListElement
+    announcementListSelector
   );
   const announcementCarouselController = new AnnouncementsCarouselController(
-    announcementCarouselElement
+    announcementCarouselSelector
+  );
+  const notificationController = new NotificationController(
+    notificationSelector
   );
 };
 const clickEventAddCss = (elementClick, elementToModify, property) => {

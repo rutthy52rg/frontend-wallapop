@@ -23,7 +23,7 @@
         <div class="col-12">
           <nav class="navbar bg-orange fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" >WALLAPOP</a>
+              <a class="navbar-brand">WALLAPOP</a>
               <button class="navbar-toggler login btn btn-info" type="button">
                 Login
                 <i class="bi bi-box-arrow-in-right"></i>
@@ -66,13 +66,18 @@
                         placeholder="Password"
                         aria-label="password"
                         aria-describedby="basic-addon1"
-                        autocomplete=on
+                        autocomplete="on"
                       />
                     </div>
                     <div class="input-group mb-3">
                       <button class="btn btn-info" type="submit">Login</button>
                     </div>
-                    <div>¿No eres miembro aún? <a href="http://localhost:8080/signup.html">Date de alta</a></div>
+                    <div>
+                      ¿No eres miembro aún?
+                      <a href="http://localhost:8080/signup.html"
+                        >Date de alta</a
+                      >
+                    </div>
                   </form>
                 </div>
               </div>
@@ -82,8 +87,7 @@
       </header>
       <!-- carousel -->
       <section class="row p-0">
-        <div class="col-12 mb-5 py-5" id="carousel-container">
-        </div>
+        <div class="col-12 mb-5 py-5" id="carousel-container"></div>
       </section>
       <!-- products list -->
 
@@ -93,6 +97,7 @@
           <section id="announcements-list"></section>
         </div>
       </section>
+      <section id="notification"></section>
     </main>
     <script type="module" src="app.js"></script>
   </body>

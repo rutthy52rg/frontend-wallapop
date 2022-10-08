@@ -1,0 +1,104 @@
+ {
+      "name": "bicicleta",
+      "sale": true,
+      "price": 220,
+      "picture": "bicicleta.png",
+      "tags": [
+        "deporte",
+        "aire libre"
+      ],
+      "destacado": true
+    },
+    {
+      "name": "coche",
+      "sale": true,
+      "price": 15500,
+      "picture": "coche.png",
+      "tags": [
+        "motor"
+      ]
+    },
+    {
+      "name": "ordenador",
+      "sale": false,
+      "price": 1500,
+      "picture": "ordenador.png",
+      "tags": [
+        "technology"
+      ]
+    },
+    {
+      "name": "moto",
+      "sale": false,
+      "price": 300,
+      "picture": "moto.png",
+      "tags": [
+        "motor"
+      ]
+    },
+    {
+      "name": "moto2",
+      "sale": true,
+      "price": 300,
+      "picture": "moto2.png",
+      "tags": [
+        "motor"
+      ]
+    },
+    {
+      "name": "zapatillas",
+      "sale": true,
+      "price": 25,
+      "picture": "zapatillas.png",
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "pelota",
+      "sale": true,
+      "price": 40,
+      "picture": "pelota.png",
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "chandal",
+      "sale": false,
+      "price": 70,
+      "picture": "chandal.png",
+      "tags": [
+        "lifestyle",
+        "sport"
+      ]
+    },
+    {
+      "name": "piragua",
+      "sale": true,
+      "price": 220,
+      "picture": "piragua.png",
+      "tags": [
+        "lifestyle",
+        "sport"
+      ]
+    },
+    {
+      "name": "caravana",
+      "sale": true,
+      "price": 35000,
+      "picture": "caravana.png",
+      "tags": [
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "name": "patines",
+      "sale": true,
+      "price": 50,
+      "picture": "patines.png",
+      "tags": [
+        "lifestyle"
+      ]
+    }

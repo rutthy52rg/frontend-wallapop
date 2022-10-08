@@ -28,4 +28,5 @@ export const buildAnnouncementView = (annoucement) => {
   `;
 
   return annoucementView;
-}
+};
+
