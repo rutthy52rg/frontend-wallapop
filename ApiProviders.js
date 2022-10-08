@@ -3,21 +3,20 @@ class ApiProviders {
   endpoints = {
     login: "/auth/login",
     signup: "/auth/register",
-    // announcements: "/api/announcements",
+    announcements: "/api/announcements",
   };
   constructor() {}
 
-  // async get(endpoint) {
-  //   const response = await fetch(`${this.baseUrl}${endpoint}`);
+  async get(endpoint) {
+    const response = await fetch(`${this.baseUrl}${endpoint}`);
 
-  //   if (!response.ok) {
-  //     throw new Error("No existen resultados");
-  //   }
+    if (!response.ok) {
+      throw new Error("No existen resultados");
+    }
 
-  //   const data = await response.json();
-
-  //   return data;
-  // }
+    const data = await response.json();
+    return data;
+  }
 
   async post(endpoint, body) {
     const token = localStorage.getItem("token"); //necesario este método porque en cabecera del cuerpo se especifica la autorización por este método. lin.29
@@ -34,7 +33,6 @@ class ApiProviders {
 
     return data;
   }
-
 }
 
 export const apiProviders = new ApiProviders();
