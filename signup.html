@@ -40,8 +40,6 @@
                   <button
                     type="button"
                     class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
                   ></button>
                 </div>
                 <div class="offcanvas-body"></div>
@@ -59,6 +57,8 @@
               <input
                 type="text"
                 class="form-control"
+                name="username"
+                id="username"
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -68,10 +68,13 @@
               <span class="input-group-text"><i class="bi-lock"></i></span>
               <input
                 type="password"
+                name="password"
+                id="password"
                 class="form-control"
                 placeholder="Password"
                 aria-label="password"
                 aria-describedby="basic-addon1"
+                autocomplete="on"
               />
             </div>
             <div class="input-group mb-3">
@@ -81,6 +84,6 @@
         </div>
       </section>
     </main>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./signup/index.js"></script>
   </body>
 </html>
