@@ -23,7 +23,7 @@ export const buildAnnouncementView = (annoucement) => {
   <div class="card-footer">
     <a href="http://localhost:8080/announcement-details.html?id=${
       annoucement.id
-    }" class="btn btn-primary">See details</a>
+    }" class="btn ${annoucement.sale == "on" ? 'btn-info' : 'btn-warning'}">See details</a>
   </div>
 </div>
   `;

@@ -1,7 +1,7 @@
 export const annoucementDetailTemplate = (annoucement) => {
   const updatedAt = new Date(annoucement.updatedAt);
   const htmlTemplate = `
-    <div class="card" style="width: 60vw;height:60vh;display:flex;align-content:center">
+    <div class="card" style="width: 400px;margin: 200px auto;">
             <div class="picture">
                 <img src="${
                   annoucement.picture

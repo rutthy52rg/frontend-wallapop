@@ -13,9 +13,20 @@ export class AnnouncementCreateController {
     console.log(this.nodeContainer)
     this.nodeContainer.addEventListener("submit", (event) => {
       event.preventDefault();
+      try {
       this.getDataFromForm();
-      pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "anuncio creado correctamente");
-      location.reload();
+      pubSub.publish(
+        pubSub.TOPICS.NOTIFICATION_ERROR,
+        "anuncio creado correctamente"
+      );
+      }catch(err){
+        pubSub.publish(
+          pubSub.TOPICS.NOTIFICATION_ERROR,
+          "error en creación de anuncio"
+        );
+      }
+
+
     });
   }
   getDataFromForm() {

@@ -14,7 +14,7 @@ export const notificationErrorTemplateHTML = (message) => {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Error</h5>
+          <h5 class="modal-title">Notification</h5>
         </div>
         <div class="modal-body">
           <p>${message}</p>

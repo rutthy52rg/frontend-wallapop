@@ -1,0 +1,172 @@
+{
+  "users": [
+    {
+      "username": "ruth",
+      "password": "$2b$10$.IDviKmhqdjUg6BctNd1Iu7MHGIqB5TpdV2BJAtnUqUO3Z4VzyoK2",
+      "id": 1
+    },
+    {
+      "username": "alberto",
+      "password": "$2b$10$.IDviKmhqdjUg6BctNd1IuoZ.aMC5Z3K5CNuPQND7kWg2RskeWvqO",
+      "id": 2
+    }
+  ],
+  "announcements": [
+    {
+      "name": "bicicleta",
+      "picture": "https://i.postimg.cc/Kjw6FnXM/bicicleta.png",
+      "tags": ["sport", "lifestyle"],
+      "description": "bicicleta azul",
+      "price": "220",
+      "sale": "on",
+      "outstanding": "on",
+      "userId": 2,
+      "updatedAt": "2022-10-09T21:53:20.941Z",
+      "id": 1
+    },
+    {
+      "name": "coche",
+      "picture": "https://i.postimg.cc/ydQqQMvn/coche.png",
+      "tags": ["motor"],
+      "description": "coche amarillo",
+      "price": "15500",
+      "sale": "on",
+      "outstanding": "on",
+      "userId": 2,
+      "updatedAt": "2022-10-09T22:18:23.702Z",
+      "id": 2
+    },
+    {
+      "name": "ordenador",
+      "picture": "https://i.postimg.cc/Qt0sL9xQ/ardenador-asus.png",
+      "tags": ["technology"],
+      "description": "ordenador asus",
+      "price": "1500",
+      "sale": null,
+      "outstanding": null,
+      "userId": 2,
+      "updatedAt": "2022-10-09T22:20:16.441Z",
+      "id": 3
+    },
+    {
+      "name": "moto",
+      "picture": "https://i.postimg.cc/dVrYsSVt/moto.png",
+      "tags": [],
+      "description": "moto 1",
+      "price": "300",
+      "sale": null,
+      "outstanding": null,
+      "userId": 2,
+      "updatedAt": "2022-10-09T22:26:09.112Z",
+      "id": 4
+    },
+    {
+      "name": "moto2",
+      "picture": "https://i.postimg.cc/9Fv2jjVn/moto2.png",
+      "tags": ["motor"],
+      "description": "moto 2",
+      "price": "600",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 2,
+      "updatedAt": "2022-10-09T22:27:19.070Z",
+      "id": 5
+    },
+    {
+      "name": "Zapatillas",
+      "picture": "https://i.postimg.cc/7hRk6Fzb/zapatillas.png",
+      "tags": ["sport"],
+      "description": "zapatillas rojas",
+      "price": "40",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 2,
+      "updatedAt": "2022-10-09T22:28:55.745Z",
+      "id": 6
+    },
+    {
+      "name": "pelota",
+      "picture": "https://i.postimg.cc/pdvtpYmQ/pelota.png",
+      "tags": ["sport"],
+      "description": "pelota plateada",
+      "price": "40",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:30:13.370Z",
+      "id": 7
+    },
+    {
+      "name": "chandal",
+      "picture": "https://i.postimg.cc/0jbTLV4v/chandal.png",
+      "tags": ["sport"],
+      "description": "chandal negro",
+      "price": "70",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:30:46.693Z",
+      "id": 8
+    },
+    {
+      "name": "piragua",
+      "picture": "https://i.postimg.cc/PJJHdXPB/piragua.png",
+      "tags": ["sport", "lifestyle"],
+      "description": "piragua naranja",
+      "price": "250",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:31:14.280Z",
+      "id": 9
+    },
+    {
+      "name": "caravana",
+      "picture": "https://i.postimg.cc/LX6KV9Bn/caravana.png",
+      "tags": ["lifestyle", "motor"],
+      "description": "caravana grande",
+      "price": "35000",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:31:47.534Z",
+      "id": 10
+    },
+    {
+      "name": "patines",
+      "picture": "https://i.postimg.cc/jq3KZ71K/patines.png",
+      "tags": ["sport", "lifestyle"],
+      "description": "patines blancos",
+      "price": "50",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:32:15.399Z",
+      "id": 11
+    },
+    {
+      "name": "movil",
+      "picture": "https://i.postimg.cc/bNGPMvXn/mobile.png",
+      "tags": ["technology"],
+      "description": "móvil negro",
+      "price": "120",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:32:46.022Z",
+      "id": 12
+    },
+    {
+      "name": "dsfads",
+      "picture": "",
+      "tags": ["lifestyle"],
+      "description": "adfdsa",
+      "price": "sdfds",
+      "sale": "on",
+      "outstanding": null,
+      "userId": 1,
+      "updatedAt": "2022-10-09T22:41:52.132Z",
+      "id": 13
+    }
+  ]
+}
