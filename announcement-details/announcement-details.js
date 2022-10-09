@@ -1,25 +1,13 @@
+import { AnnouncementDetailsController } from "../announcement-details/AnnouncementDetailsController.js";
 import { LoginController } from "../login/LoginController.js";
 import { NotificationController } from "../notifications/notificationsController.js";
-import { pubSub } from "../notifications/PubSub.js";
 import {
-  clickEventAddCss,
-  clickEventRemoveCss
+    clickEventAddCss,
+    clickEventRemoveCss
 } from "../utils/eventsActions.js";
-import { AnnouncementCreateController } from "./AnnouncementCreateController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const accountStatus = getStatusAccount();
   setControllers();
-  if (!accountStatus) {
-    document.querySelector("#create-announcement").remove();
-    pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "no tienes permisos");
-    document.querySelector(".notification .btn-close").remove();
-    setTimeout(() => {
-        location.href = "http://127.0.0.1:8080/signup.html";
-    }, 1000);
-    
-  }
-
   clickEventAddCss(".navbar-toggler", ".offcanvas-end", "show");
   clickEventRemoveCss(
     ".offcanvas-header > .btn-close",
@@ -31,10 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const setControllers = () => {
   const accountStatus = getStatusAccount();
   console.log(accountStatus);
+  const params = new URLSearchParams(location.search);
+  const announcementId = params.get("id");
   const selectors = {
     loginFormContainer: document.querySelector(".header-container"),
     notificationStatus: document.querySelector(".notification"),
-    createAnnuncementForm: document.querySelector("#create-announcement-form"),
+    announcementDetailsContainer: document.querySelector(
+      ".announcement-details-container"
+    ),
   };
   const controllers = {
     loginController: new LoginController(
@@ -44,8 +36,13 @@ const setControllers = () => {
     notificationController: new NotificationController(
       selectors.notificationStatus
     ),
-    announcementCreateController: new AnnouncementCreateController(selectors.createAnnuncementForm)
+    announcementDetailsControllers: new AnnouncementDetailsController(
+      selectors.announcementDetailsContainer
+    ),
   };
+  controllers.announcementDetailsControllers.printAnnouncementDetail(
+    announcementId
+  );
   return controllers;
 };
 

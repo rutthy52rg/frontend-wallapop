@@ -1,4 +1,4 @@
-export const notificationStatusTemplateHTML = (message, message2) => {
+export const notificationStatusTemplateHTML = (message) => {
   const htmlTemplate = `
   <div class="alert alert-info alert-dismissible fade show" role="alert">
       <strong><p>${message}</p></strong>

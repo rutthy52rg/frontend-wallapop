@@ -14,7 +14,7 @@ export const buildCarouselContentView = (idContainer) => {
 
 export const buildCarouselItemsView = (annoucement) => {
   let carouseAnouncementItemView = null;
-  if (annoucement.destacado) {
+  if (annoucement.outstanding = "on") {
     carouseAnouncementItemView = `
      <div class="carousel-item active">
         <img src="${annoucement.picture}" class="w-50" />

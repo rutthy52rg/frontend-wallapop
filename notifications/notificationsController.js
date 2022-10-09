@@ -32,7 +32,7 @@ export class NotificationController {
     );
     closeModalButton.addEventListener("click", () => {
       modal.classList.remove("show");
-      location.reload()
+      location.reload();
     });
   }
   printNotificationStatus(message) {
@@ -44,6 +44,7 @@ export class NotificationController {
     // asignarle un escucheador al evento click
     closeButtonElement.addEventListener("click", () => {
       this.notificationElement.innerHTML = "";
+      location.reload();
     });
   }
 }

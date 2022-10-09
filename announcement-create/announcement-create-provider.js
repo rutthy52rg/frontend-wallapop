@@ -2,7 +2,7 @@
 import { apiProviders } from "../ApiProviders.js";
 
 export const createAnnouncement = (annoucement) => {
-  apiProviders.post(apiProviders.endpoints.announcements, {
-    content: annoucement,
-  });
+  console.log(annoucement)
+  const content = annoucement
+  apiProviders.post(apiProviders.endpoints.announcements, content);
 };
