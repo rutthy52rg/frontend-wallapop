@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+    <title>WALLAPOP</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- header -->
+       <!-- header -->
+      <header class="row header-container" >
+        <div class="col-12">
+          <nav class="navbar bg-info fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand">WALLAPOP</a>
+              <button class="navbar-toggler login btn btn-info" type="button">
+                Account
+                <i class="bi bi-box-arrow-in-right"></i>
+              </button>
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+              >
+              <div class="offcanvas-header bg-light">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    Account
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body account-container"></div>
+              </div>
+            </div>
+            <nav class="navbar bg-warning fixed-top mt-5">
+            <div class="container-fluid">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="http://127.0.0.1:8080/"
+                    >Home</a>
+                </li>
+              </ul>
+              </div>
+          </nav>
+          </nav>
+           
+        </div>
+      </header>
+
+    
+      <!-- form create annnouncement -->
+      <section class="row justify-content-md-center" id="create-announcement">
+        <div class="col-12 p-5 text-center"><h1>New announcement</h1></div>
+        <div class="col-6 p-5">
+          <form class="d-flex flex-column" id="create-announcement-form">
+            <div class="input-group mt-3">
+              <span class="input-group-text" id="basic-addon1">Name</span>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                placeholder="Article name""
+                required
+              />
+            </div>
+               <div class="input-group mt-3">
+              <span class="input-group-text" id="basic-addon1">Picture</span>
+              <input
+                type="url"
+                class="form-control"
+                name="picture"
+                placeholder="https://postimg.cc"
+                required
+              />
+            </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text" id="basic-addon1">About</span>
+               <textarea
+                type="text"
+                class="form-control"
+                name="description"
+                placeholder="Article description"
+                required
+              /></textarea>
+              </div>
+            <div class="input-group mt-3">
+              <span class="input-group-text" id="basic-addon1"> Price</span>
+              <input
+                type="text"
+                class="form-control"
+                name="price"
+                placeholder="Article price"
+                required
+              />
+            </div>
+            <div class=" my-3 d-flex flex-row justify-content-start switchs">
+             <div class="input-group">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sale">
+                <label class="form-check-label" for="sale">Sale</label>
+              </div>
+            </div>
+             <div class="input-group ">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="outstanding">
+                <label class="form-check-label" for="outstanding">Outstanding</label>
+              </div>
+            </div>
+          </div>
+            <div class=" mb-3 d-flex flex-row justify-content-between">
+              <button class="btn btn-info" type="submit">Create announcement</button>
+              <button class="btn btn-info" type="reset">Cancel</button>
+            </div>
+            
+            <a href="http://localhost:8080/">Back to Home</a>
+          </form>
+        </div>
+      </section>
+      <section class="row justify-content-md-center notification-container">
+        <div class="col-6 notification"></div>
+      </section>
+    </main>
+    <script type="module" src="./announcement-create/announcement-create.js"></script>
+  </body>
+</html>

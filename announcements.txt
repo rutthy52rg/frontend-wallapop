@@ -1,104 +1,85 @@
- {
+{
       "name": "bicicleta",
       "sale": true,
       "price": 220,
-      "picture": "bicicleta.png",
-      "tags": [
-        "deporte",
-        "aire libre"
-      ],
+      "picture": "https://i.postimg.cc/Kjw6FnXM/bicicleta.png",
+      "tags": ["deporte", "aire libre"],
       "destacado": true
     },
     {
       "name": "coche",
       "sale": true,
       "price": 15500,
-      "picture": "coche.png",
-      "tags": [
-        "motor"
-      ]
+      "picture": "https://i.postimg.cc/ydQqQMvn/coche.png",
+      "tags": ["motor"]
     },
     {
       "name": "ordenador",
       "sale": false,
       "price": 1500,
-      "picture": "ordenador.png",
-      "tags": [
-        "technology"
-      ]
+      "picture": "https://i.postimg.cc/Qt0sL9xQ/ardenador-asus.png",
+      "tags": ["technology"]
     },
     {
       "name": "moto",
       "sale": false,
       "price": 300,
-      "picture": "moto.png",
-      "tags": [
-        "motor"
-      ]
+      "picture": "https://i.postimg.cc/dVrYsSVt/moto.png",
+      "tags": ["motor"]
     },
     {
       "name": "moto2",
       "sale": true,
       "price": 300,
-      "picture": "moto2.png",
-      "tags": [
-        "motor"
-      ]
+      "picture": "https://i.postimg.cc/9Fv2jjVn/moto2.png",
+      "tags": ["motor"]
     },
     {
       "name": "zapatillas",
       "sale": true,
       "price": 25,
-      "picture": "zapatillas.png",
-      "tags": [
-        "sport"
-      ]
+      "picture": "https://i.postimg.cc/7hRk6Fzb/zapatillas.png",
+      "tags": ["sport"]
     },
     {
       "name": "pelota",
       "sale": true,
       "price": 40,
-      "picture": "pelota.png",
-      "tags": [
-        "sport"
-      ]
+      "picture": "https://i.postimg.cc/pdvtpYmQ/pelota.png",
+      "tags": ["sport"]
     },
     {
       "name": "chandal",
       "sale": false,
       "price": 70,
-      "picture": "chandal.png",
-      "tags": [
-        "lifestyle",
-        "sport"
-      ]
+      "picture": "https://i.postimg.cc/0jbTLV4v/chandal.png",
+      "tags": ["lifestyle", "sport"]
     },
     {
       "name": "piragua",
       "sale": true,
       "price": 220,
-      "picture": "piragua.png",
-      "tags": [
-        "lifestyle",
-        "sport"
-      ]
+      "picture": "https://i.postimg.cc/PJJHdXPB/piragua.png",
+      "tags": ["lifestyle", "sport"]
     },
     {
       "name": "caravana",
       "sale": true,
       "price": 35000,
-      "picture": "caravana.png",
-      "tags": [
-        "lifestyle",
-        "motor"
-      ]
+      "picture": "https://i.postimg.cc/LX6KV9Bn/caravana.png",
+      "tags": ["lifestyle", "motor"]
     },
     {
       "name": "patines",
       "sale": true,
       "price": 50,
-      "picture": "patines.png",
-      "tags": [
-        "lifestyle"
-      ]
+      "picture": "https://i.postimg.cc/jq3KZ71K/patines.png",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "movil",
+      "sale": true,
+      "price": 120,
+      "picture": "https://i.postimg.cc/bNGPMvXn/mobile.png",
+      "tags": ["technology"]
     }

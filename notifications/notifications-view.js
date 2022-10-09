@@ -1,7 +1,7 @@
-export const notificationStatusTemplateHTML = (message) => {
+export const notificationStatusTemplateHTML = (message, message2) => {
   const htmlTemplate = `
   <div class="alert alert-info alert-dismissible fade show" role="alert">
-      <strong><p>${message}</p></strong> You should check in on some of those fields below.
+      <strong><p>${message}</p></strong>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 `;
@@ -14,13 +14,7 @@ export const notificationErrorTemplateHTML = (message) => {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <h5 class="modal-title">Error</h5>
         </div>
         <div class="modal-body">
           <p>${message}</p>

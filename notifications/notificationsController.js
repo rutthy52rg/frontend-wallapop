@@ -32,6 +32,7 @@ export class NotificationController {
     );
     closeModalButton.addEventListener("click", () => {
       modal.classList.remove("show");
+      location.reload()
     });
   }
   printNotificationStatus(message) {

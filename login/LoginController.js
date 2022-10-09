@@ -1,27 +1,42 @@
+import { pubSub } from "../notifications/PubSub.js";
+import { decodeToken } from "../utils/jwt.js";
 import { loginUser } from "./login-provider.js";
-import { loginFormTemplate } from "./login-view.js";
+import {
+  linkAnnouncementCreateTemplate,
+  loginFormTemplate,
+  logoutTemplate
+} from "./login-view.js";
 
 export class LoginController {
-  constructor(nodeContainer) {
+  constructor(nodeContainer, accountStatus) {
     this.nodeContainer = nodeContainer;
+    this.nodeLogin = null;
     this.nodeForm = null;
-    this.printLoginForm();
-    
+    this.loged = accountStatus;
+    this.currentUser = null;
+    this.onload();
   }
 
- printLoginForm() {
-    this.nodeContainer.innerHTML = loginFormTemplate();
-    setTimeout(() => {
+  onload() {
+    this.nodeLogin = this.nodeContainer.querySelector(".account-container");
+    if (!this.loged) {
+      this.nodeLogin.innerHTML = loginFormTemplate();
+      setTimeout(() => {
         this.getDataFromLogin();
-    }, 2000);
+      }, 2000);
+    } else {
+      this.printLogoutTemplate();
+    }
   }
 
   //recoger datos del formulario
   getDataFromLogin() {
-    this.nodeForm = this.nodeContainer.querySelector('.login-form');
+    this.nodeForm = this.nodeLogin.querySelector(".login-form");
     this.nodeForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      console.log(event.target);
+      this.nodeContainer
+        .querySelector(".offcanvas-end")
+        .classList.remove("show");
       this.login();
     });
   }
@@ -34,9 +49,43 @@ export class LoginController {
     try {
       const encodeToken = await loginUser(username, password);
       localStorage.setItem("token", encodeToken);
-      console.log(username, password, encodeToken);
-    } catch (error) {
-      console.log("error addfadsf");
+      if (encodeToken !== undefined) {
+        location.reload();
+        this.printLogoutTemplate();
+      } else {
+        this.clearToken();
+        pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, "Error usuario");
+      }
+    } catch (error) {}
+  }
+  clearToken() {
+    localStorage.removeItem("token");
+  }
+  getDataLogedFromToken() {
+    const tokenToDecode = localStorage.getItem("token");
+    const userData = decodeToken(tokenToDecode);
+    return userData;
+  }
+  printLogoutTemplate() {
+    this.currentUser = this.getDataLogedFromToken();
+    this.nodeLogin.innerHTML = logoutTemplate(this.currentUser);
+    this.printButtonLogout();
+    this.printAnnouncementCreateLink();
+    this.loged = false;
+  }
+  printButtonLogout() {
+    const logoutButton = this.nodeLogin.querySelector(".logout-button");
+    logoutButton.addEventListener("click", () => {
+      this.clearToken();
+      location.reload();
+      this.loged = false;
+      this.nodeLogin.innerHTML = loginFormTemplate();
+    });
+  }
+  printAnnouncementCreateLink() {
+    if (this.loged || this.loged !== "undefined") {
+      const navUl = this.nodeContainer.querySelector(".navbar-nav");
+      navUl.insertAdjacentHTML("beforeend", linkAnnouncementCreateTemplate());
     }
   }
 }

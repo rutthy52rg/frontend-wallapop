@@ -19,13 +19,13 @@
   <body>
     <main class="main">
       <!-- header -->
-      <header class="row" id="header-container">
+      <header class="row header-container" >
         <div class="col-12">
-          <nav class="navbar bg-orange fixed-top">
+          <nav class="navbar bg-info fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand">WALLAPOP</a>
               <button class="navbar-toggler login btn btn-info" type="button">
-                Login
+                Account
                 <i class="bi bi-box-arrow-in-right"></i>
               </button>
               <div
@@ -33,9 +33,9 @@
                 tabindex="-1"
                 id="offcanvasNavbar"
               >
-                <div class="offcanvas-header bg-light">
+              <div class="offcanvas-header bg-light">
                   <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    Login
+                    Account
                   </h5>
                   <button
                     type="button"
@@ -44,11 +44,21 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="offcanvas-body login-container">
-                </div>
+                <div class="offcanvas-body account-container"></div>
               </div>
             </div>
+            <nav class="navbar bg-warning fixed-top mt-5">
+            <div class="container-fluid">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="http://127.0.0.1:8080/"
+                    >Home</a>
+                </li>
+              </ul>
+              </div>
           </nav>
+          </nav>
+           
         </div>
       </header>
       <!-- carousel -->
@@ -63,8 +73,8 @@
           <section id="announcements-list"></section>
         </div>
       </section>
-      <section class="row justify-content-md-center" >
-        <div class="col-6" id="notification"></div>
+      <section class="row justify-content-md-center">
+        <div class="col-6 notification" ></div>
       </section>
     </main>
     <script type="module" src="app.js"></script>

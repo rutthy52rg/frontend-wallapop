@@ -27,7 +27,8 @@ export class SignUpController {
       console.log(username, password);
       const encodeToken = await loginUser(username, password)
       localStorage.setItem("token", encodeToken);
-    } catch (error) {
+      location.href = "http://localhost:8080/";
+    } catch (error) {   
       console.log("error addfadsf");
     }
   }

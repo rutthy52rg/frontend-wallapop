@@ -1,10 +1,9 @@
-export const decodeToken = (token) => {
+export const decodeToken = (jwt) => {
   let decodedToken;
 
   try {
-    const stringifiedToken = atob(token.split(".")[1]);
+    const stringifiedToken = atob(jwt.split(".")[1]);
     decodedToken = JSON.parse(stringifiedToken);
-    console.log(token)
   } catch (error) {
     return null;
   }

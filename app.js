@@ -18,13 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const setControllers = () => {
+  const accountStatus = getStatusAccount();
     const selectors = {
       announcementCarouselSelector: document.querySelector(
         "#carousel-container"
       ),
       announcementListSelector: document.querySelector("#announcements-list"),
-      notificationSelector: document.querySelector("#notification"),
-      loginFormContainer: document.querySelector(".login-container"),
+      notificationSelector: document.querySelector(".notification"),
+      loginFormContainer: document.querySelector(
+        ".header-container"
+      ),
     };
     const controllers = {
       announcementsListController: new AnnouncementsListController(
@@ -36,7 +39,18 @@ const setControllers = () => {
       notificationController: new NotificationController(
         selectors.notificationSelector
       ),
-      loginController: new LoginController(selectors.loginFormContainer),
+      loginController: new LoginController(
+        selectors.loginFormContainer,
+        accountStatus
+      ),
     };
     return controllers;
+};
+const getStatusAccount = () => {
+    const token = localStorage.getItem("token");
+    if (token && token !== undefined) {
+      return true;
+    }else{
+      return false;
+    }
 };

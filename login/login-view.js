@@ -37,3 +37,22 @@ export const loginFormTemplate = () => {
                   </form>`;
   return htmlTemplate;
 };
+
+export const logoutTemplate = (currentUser) => {
+  const htmlTemplate = `
+      <p>hola ${currentUser.username} </p>
+       <div class="input-group mb-3">
+          <button class="btn btn-info logout-button">Logout</button>
+      </div>
+  `;
+  return htmlTemplate;
+}; 
+
+export const linkAnnouncementCreateTemplate = () => {
+  const templateHTML = `
+       <li class="nav-item">
+            <a class="nav-link create-announcement" href="http://127.0.0.1:8080/announcement-create.html">Crear anuncio</a>
+        </li>`;
+  return templateHTML;
+};
+

@@ -7,8 +7,13 @@ a:-webkit-any-link {
   overflow-anchor: none !important;
   overscroll-behavior: none;
 }
-.navbar {
-  background-color: var(--bs-info);
+
+.navbar-nav{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10vw;
 }
 .offcanvas.offcanvas-end {
   max-height: max-content;
@@ -52,7 +57,7 @@ button.login {
 
 /* CAROUSEL */
 #carousel-container {
-  background-color: var(--bs-warning);
+  background-color: var(--bs-purple);
 }
 .carousel-inner {
   max-height: 40vh;
@@ -123,15 +128,47 @@ button.login {
     margin: 30px auto;
 }
 
+/* notifications */
+.notification-container {
+    position: fixed;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
 /* modal */
+
 .modal.show{
-  display: block;
+  display: flex;
+  position: fixed;
+  height: 60vh;
+  width: 100vw;
+  align-items: center;
+}
+.modal.show .modal-dialog{
+  width: 50vw;
+
+
 }
 /* singup */
 
-#signup {
-    height: 60vh;
+#signup, #create-announcement{
+    height: 80vh;
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+/* create-announcement-form */
+#create-announcement-form .input-group-text{
+  width: 80px;
+
+}
+.form-check-input:checked {
+    background-color: var(--bs-info);
+    border-color: var(--bs-info);
+}
+#create-announcement-form .switchs .input-group{
+  width: max-content;
+  margin: 20px;
 }

@@ -2,7 +2,7 @@ export const buildAnnouncementView = (annoucement) => {
   const annoucementView = `
   <div class="card" style="width: 18rem;">
   <div class="picture">
-    <img src="./public/images/${
+    <img src="${
       annoucement.picture
     }" class="card-img-top" alt="..." />
     
