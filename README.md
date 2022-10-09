@@ -22,8 +22,6 @@
 
 *Estructura proyecto
 
-        |------_BBDD
-        |------_SHELL
         |------wallapop
         |    |-----announcement-create
         |       |---announcement-create-provider.js
@@ -46,15 +44,26 @@
         |       |---login-provider.js
         |       |---login-view.js
         |       |---LoginController.js
-        |       |---announcement-details.js
-        |    |-----models
-        |       |---Anouncement.js
-        |    |-----routes
-        |       |---api
-        |           |---anouncements.js
-        |       |---index.js
-        |    |-----views
-        |       |---index.js
+        |    |-----notifications
+        |       |---notifications-view.js
+        |       |---notificationsController.js
+        |       |---PubSub.js
+        |    |-----signup
+        |       |---signup-provider.js
+        |       |---sighup.js
+        |       |---SignUpController.js
+        |    |-----spinner
+        |       |---spinner-view.js
+        |       |---SpinnnerController.js
+        |    |-----utils
+        |       |---eventActions.js
+        |       |---jwt.js
         |   |---app.js
-        |   |---initDB.js
-        |   |---- Readme.md
+        |   |---app.css
+        |   |---index.html
+        |   |---singup.html
+        |   |---announcements-created.html 
+        |   |---announcements-details.html 
+        |   |---ApiProviders.js
+        |   |---db.json          
+        |   |---Readme.md
