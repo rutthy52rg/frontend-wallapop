@@ -8,7 +8,7 @@ a:-webkit-any-link {
   overscroll-behavior: none;
 }
 
-.navbar-nav{
+.navbar-nav {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -78,7 +78,7 @@ button.login {
   opacity: 1;
   transition: all 1s;
 }
-.carousel-indicators{
+.carousel-indicators {
   bottom: -65px;
 }
 .carousel-indicators [data-bs-target] {
@@ -110,68 +110,85 @@ button.login {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  right:  40vw;
+  right: 40vw;
   bottom: 10vh;
 }
 
 /* SPINNER */
-.spinner.hide{
+.spinner.hide {
   display: none;
 }
 
+.spinner {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .spinner-border {
-    --bs-spinner-width: 20rem;
-    --bs-spinner-height: 20rem;
-    --bs-spinner-vertical-align: -0.125em;
-    --bs-spinner-border-width: 4em;
-    --bs-spinner-animation-speed: 1.2s;
-    --bs-spinner-animation-name: spinner-border;
-    border: var(--bs-spinner-border-width) solid currentcolor;
-    border-right-color: transparent;
-    margin: 30px auto;
+  --bs-spinner-width: 20rem;
+  --bs-spinner-height: 20rem;
+  --bs-spinner-vertical-align: -0.125em;
+  --bs-spinner-border-width: 4em;
+  --bs-spinner-animation-speed: 1.2s;
+  --bs-spinner-animation-name: spinner-border;
+  border: var(--bs-spinner-border-width) solid currentcolor;
+  border-right-color: transparent;
+  margin: 30px auto;
 }
 
 /* notifications */
 .notification-container {
-    position: fixed;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    width: 100vw;
+  position: fixed;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.alert-info {
+    position: absolute;
+    width: 90vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: calc(100vh/2);
+    /* bottom: 0; */
+    z-index: 2;
 }
 /* modal */
 
-.modal.show{
+.modal.show {
   display: flex;
   position: fixed;
   height: 60vh;
   width: 100vw;
   align-items: center;
 }
-.modal.show .modal-dialog{
+.modal.show .modal-dialog {
   width: 50vw;
-
-
 }
 /* singup */
 
-#signup, #create-announcement{
-    height: 80vh;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+#signup,
+#create-announcement {
+  height: 80vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* create-announcement-form */
-#create-announcement-form .input-group-text{
+#create-announcement-form .input-group-text {
   width: 80px;
-
 }
 .form-check-input:checked {
-    background-color: var(--bs-info);
-    border-color: var(--bs-info);
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
 }
-#create-announcement-form .switchs .input-group{
+#create-announcement-form .switchs .input-group {
   width: max-content;
   margin: 20px;
 }

@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "no tienes permisos");
     document.querySelector(".notification .btn-close").remove();
     setTimeout(() => {
-        location.href = "http://127.0.0.1:8080/signup.html";
+      location.href = "http://127.0.0.1:8080/signup.html";
     }, 1000);
-    
   }
 
   clickEventAddCss(".navbar-toggler", ".offcanvas-end", "show");
@@ -44,7 +43,9 @@ const setControllers = () => {
     notificationController: new NotificationController(
       selectors.notificationStatus
     ),
-    announcementCreateController: new AnnouncementCreateController(selectors.createAnnuncementForm)
+    announcementCreateController: new AnnouncementCreateController(
+      selectors.createAnnuncementForm
+    ),
   };
   return controllers;
 };
