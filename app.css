@@ -78,6 +78,9 @@ button.login {
   opacity: 1;
   transition: all 1s;
 }
+.carousel-indicators{
+  bottom: -65px;
+}
 .carousel-indicators [data-bs-target] {
   background-color: var(--bs-info);
   height: 30px;

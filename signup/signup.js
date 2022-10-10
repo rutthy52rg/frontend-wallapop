@@ -1,4 +1,5 @@
 
+import { NotificationController } from "../notifications/notificationsController.js";
 import {
   clickEventAddCss,
   clickEventRemoveCss
@@ -19,9 +20,11 @@ import { SignUpController } from "./SignUpController.js";
 const setControllers = () => {
   const selectors = {
     signUpForm: document.querySelector("#signup-form"),
+    notificationSelector: document.querySelector('.notification')
   };
   const controllers = {
-    signUpController: new SignUpController(selectors.signUpForm)
+    signUpController: new SignUpController(selectors.signUpForm),
+    notificationController: new NotificationController(selectors.notificationSelector)
   };
   return controllers;
 };

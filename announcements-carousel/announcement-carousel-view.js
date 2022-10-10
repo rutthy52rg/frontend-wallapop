@@ -17,7 +17,7 @@ export const buildCarouselItemsView = (annoucement) => {
   if (annoucement.outstanding == "on") {
     carouseAnouncementItemView = `
      <div class="carousel-item active">
-        <img src="${annoucement.picture}" class="w-90" />
+        <img src="${annoucement.picture}" class="d-block w-100" />
         <div class="datas">${annoucement.name}</div>
     </div>
   `;
@@ -29,7 +29,7 @@ export const buildCarouselItemsView = (annoucement) => {
 
 export const buildCarouselDots = (annoucement, idContainer) => {
   let carouselDots = null;
-  if (annoucement.destacado) {
+  if (annoucement.outstanding) {
     carouselDots = `
         <button type="button" data-bs-target="#${idContainer}" data-bs-slide-to="" class="" aria-current="true" aria-label="Slide 1"></button>`
   } else {
