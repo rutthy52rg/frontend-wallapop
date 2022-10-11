@@ -12,3 +12,13 @@ export const clickEventRemoveCss = (elementClick, elementToModify, property) => 
     document.querySelector(elementToModify).classList.remove(property);
   });
 };
+export const closeModal =(selectorParent)=>{
+       const modal = selectorParent.querySelector(".modal");
+       modal.classList.add("show");
+       const closeModalButton = selectorParent.querySelector(
+         ".modal .close-button"
+       );
+       closeModalButton.addEventListener("click", () => {
+         modal.classList.remove("show");
+     });
+}

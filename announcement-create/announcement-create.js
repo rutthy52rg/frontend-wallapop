@@ -1,6 +1,5 @@
 import { LoginController } from "../login/LoginController.js";
 import { NotificationController } from "../notifications/notificationsController.js";
-import { pubSub } from "../notifications/PubSub.js";
 import {
   clickEventAddCss,
   clickEventRemoveCss
@@ -8,17 +7,7 @@ import {
 import { AnnouncementCreateController } from "./AnnouncementCreateController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const accountStatus = getStatusAccount();
   setControllers();
-  if (!accountStatus) {
-    document.querySelector("#create-announcement").remove();
-    pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "no tienes permisos");
-    document.querySelector(".notification .btn-close").remove();
-    setTimeout(() => {
-      location.href = "http://127.0.0.1:8080/signup.html";
-    }, 1000);
-  }
-
   clickEventAddCss(".navbar-toggler", ".offcanvas-end", "show");
   clickEventRemoveCss(
     ".offcanvas-header > .btn-close",
@@ -44,7 +33,8 @@ const setControllers = () => {
       selectors.notificationStatus
     ),
     announcementCreateController: new AnnouncementCreateController(
-      selectors.createAnnuncementForm
+      selectors.createAnnuncementForm,
+      accountStatus
     ),
   };
   return controllers;

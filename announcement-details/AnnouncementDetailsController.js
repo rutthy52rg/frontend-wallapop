@@ -1,16 +1,22 @@
 import { pubSub } from "../notifications/PubSub.js";
 import { decodeToken } from "../utils/jwt.js";
 import {
-    getAnnouncementId,
-    removeAnnouncementId
+  getAnnouncementId,
+  removeAnnouncementId
 } from "./announcement-details-provider.js";
 import { annoucementDetailTemplate } from "./announcement-details-view.js";
 
 export class AnnouncementDetailsController {
-  constructor(nodeElement) {
+  constructor(nodeElement, statusAccount) {
     this.nodeElementContainer = nodeElement;
+    this.loged = statusAccount;
     this.announcement = null;
+    this.load();
   }
+  load() {
+    console.log("detail", this.loged);
+  }
+
   async printAnnouncementDetail(annoucementId) {
     try {
       const annoucement = await getAnnouncementId(annoucementId);
@@ -18,7 +24,7 @@ export class AnnouncementDetailsController {
       this.nodeElementContainer.innerHTML = annoucementDetailTemplate(
         this.announcement
       );
-      this.printRemoveButton()
+      this.printRemoveButton();
     } catch (error) {
       pubSub.publish(
         pubSub.TOPICS.NOTIFICATION_ERROR,
@@ -49,10 +55,10 @@ export class AnnouncementDetailsController {
         window.location = "/";
       } catch (error) {
         // pubsub para mostrar notificación de error
-         pubSub.publish(
-           pubSub.TOPICS.NOTIFICATION_ERROR,
-           "no se pudo borrar el anuncio"
-         );
+        pubSub.publish(
+          pubSub.TOPICS.NOTIFICATION_ERROR,
+          "no se pudo borrar el anuncio"
+        );
       }
     }
   }

@@ -155,18 +155,6 @@
       "userId": 1,
       "updatedAt": "2022-10-09T22:32:46.022Z",
       "id": 12
-    },
-    {
-      "name": "dsfads",
-      "picture": "",
-      "tags": ["lifestyle"],
-      "description": "adfdsa",
-      "price": "sdfds",
-      "sale": "on",
-      "outstanding": null,
-      "userId": 1,
-      "updatedAt": "2022-10-09T22:41:52.132Z",
-      "id": 13
     }
   ]
 }

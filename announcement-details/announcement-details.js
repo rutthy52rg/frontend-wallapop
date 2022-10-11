@@ -2,8 +2,8 @@ import { AnnouncementDetailsController } from "../announcement-details/Announcem
 import { LoginController } from "../login/LoginController.js";
 import { NotificationController } from "../notifications/notificationsController.js";
 import {
-    clickEventAddCss,
-    clickEventRemoveCss
+  clickEventAddCss,
+  clickEventRemoveCss
 } from "../utils/eventsActions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const setControllers = () => {
   const accountStatus = getStatusAccount();
-  console.log(accountStatus);
   const params = new URLSearchParams(location.search);
   const announcementId = params.get("id");
   const selectors = {
@@ -37,7 +36,8 @@ const setControllers = () => {
       selectors.notificationStatus
     ),
     announcementDetailsControllers: new AnnouncementDetailsController(
-      selectors.announcementDetailsContainer
+      selectors.announcementDetailsContainer,
+      accountStatus
     ),
   };
   controllers.announcementDetailsControllers.printAnnouncementDetail(

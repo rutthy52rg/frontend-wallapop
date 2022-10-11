@@ -19,13 +19,15 @@ export class LoginController {
 
   onload() {
     this.nodeLogin = this.nodeContainer.querySelector(".account-container");
-    if (!this.loged) {
+    if(this.loged) {
+      setTimeout(() => {
+        this.printLogoutTemplate();
+      }, 300);
+    } else {
       this.nodeLogin.innerHTML = loginFormTemplate();
       setTimeout(() => {
         this.getDataFromLogin();
-      }, 2000);
-    } else {
-      this.printLogoutTemplate();
+      }, 1000);
     }
   }
 
@@ -58,14 +60,17 @@ export class LoginController {
       }
     } catch (error) {}
   }
+
   clearToken() {
     localStorage.removeItem("token");
   }
+
   getDataLogedFromToken() {
     const tokenToDecode = localStorage.getItem("token");
     const userData = decodeToken(tokenToDecode);
     return userData;
   }
+
   printLogoutTemplate() {
     this.currentUser = this.getDataLogedFromToken();
     this.nodeLogin.innerHTML = logoutTemplate(this.currentUser);
@@ -73,6 +78,7 @@ export class LoginController {
     this.printAnnouncementCreateLink();
     this.loged = false;
   }
+
   printButtonLogout() {
     const logoutButton = this.nodeLogin.querySelector(".logout-button");
     logoutButton.addEventListener("click", () => {
@@ -82,6 +88,7 @@ export class LoginController {
       this.nodeLogin.innerHTML = loginFormTemplate();
     });
   }
+
   printAnnouncementCreateLink() {
     if (this.loged || this.loged !== "undefined") {
       const navUl = this.nodeContainer.querySelector(".navbar-nav");

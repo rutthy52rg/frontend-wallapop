@@ -6,13 +6,15 @@ import { buildAnnouncementView } from "./announcement-list-view.js";
 //clase controlador para listar anuncios
 export class AnnouncementsListController {
   //pasamos por parámetro el nodo html que lo contendrá
-  constructor(nodeElement) {
+  constructor(nodeElement, accountStatus) {
     this.announcementSelectorContainer = nodeElement;
+    this.loged = accountStatus;
     this.spinner = new SpinnerController(this.announcementSelectorContainer);
     this.loadAnnouncements();
   }
 
   async loadAnnouncements() {
+    console.log("list", this.loged);
     this.spinner.printSpinner();
     let announcements = [];
 
@@ -29,7 +31,6 @@ export class AnnouncementsListController {
     } else {
       this.printAnouncements(announcements);
       this.spinner.clearSpinner();
-      pubSub.publish(pubSub.TOPICS.NOTIFICATION_STATUS, "pintados");
     }
   }
 

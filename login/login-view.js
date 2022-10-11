@@ -51,7 +51,7 @@ export const logoutTemplate = (currentUser) => {
 export const linkAnnouncementCreateTemplate = () => {
   const templateHTML = `
        <li class="nav-item">
-            <a class="nav-link create-announcement" href="http://127.0.0.1:8080/announcement-create.html">Crear anuncio</a>
+            <a class="nav-link create-announcement btn btn-info px-4" href="http://127.0.0.1:8080/announcement-create.html">Crear anuncio</a>
         </li>`;
   return templateHTML;
 };
